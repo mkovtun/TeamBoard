@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/TeamBoard.Commands" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TeamBoard.Commands" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="CreateUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Login_x0040_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name_x0040_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password_x0040_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId_x0040_" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateUser" nillable="true" type="tns:CreateUser" />
+  <xs:complexType name="SetUserPhoto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OriginalVersion_x0040_" type="xs:int" />
+      <xs:element minOccurs="0" name="Photo_x0040_" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="UserId_x0040_" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SetUserPhoto" nillable="true" type="tns:SetUserPhoto" />
+  <xs:complexType name="CreateProject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Caption_x0040_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatorId_x0040_" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProjectId_x0040_" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateProject" nillable="true" type="tns:CreateProject" />
+  <xs:complexType name="CreateTaskStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OriginalVersion_x0040_" type="xs:int" />
+      <xs:element minOccurs="0" name="ProjectId_x0040_" type="ser:guid" />
+      <xs:element minOccurs="0" name="TaskStatusCaption_x0040_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateTaskStatus" nillable="true" type="tns:CreateTaskStatus" />
+  <xs:complexType name="CreateUserStoryStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OriginalVersion_x0040_" type="xs:int" />
+      <xs:element minOccurs="0" name="ProjectId_x0040_" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserStoryStatusCaption_x0040_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateUserStoryStatus" nillable="true" type="tns:CreateUserStoryStatus" />
+  <xs:complexType name="AddTaskStatusToUserStoryStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OriginalVersion_x0040_" type="xs:int" />
+      <xs:element minOccurs="0" name="ProjectId_x0040_" type="ser:guid" />
+      <xs:element minOccurs="0" name="TaskStatusPosition_x0040_" type="xs:int" />
+      <xs:element minOccurs="0" name="UserStoryPosition_x0040_" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddTaskStatusToUserStoryStatus" nillable="true" type="tns:AddTaskStatusToUserStoryStatus" />
+</xs:schema>

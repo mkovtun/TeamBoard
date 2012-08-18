@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dade2832-3b1f-4cd2-8f72-11ef770ff631" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="TeamBoard.Commands" />
+      <ReferencedAssembly AssemblyName="TeamBoard.Events" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:8008/TeamBoardService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="0ae0ddf3-9a88-4976-9ded-6106b104e682" SourceId="1" SourceUrl="net.tcp://localhost:8008/TeamBoardService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="088d67a5-fcb9-44fe-b234-109df110841b" SourceId="1" SourceUrl="net.tcp://localhost:8008/TeamBoardService/mex" />
+    <MetadataFile FileName="TeamBoard.Commands.xsd" MetadataType="Schema" ID="8837321b-24cc-433b-b818-3a7a9a9c6bb7" SourceId="1" SourceUrl="net.tcp://localhost:8008/TeamBoardService/mex" />
+    <MetadataFile FileName="TeamBoard.Events.xsd" MetadataType="Schema" ID="6bf0c659-4129-4617-975e-154a533a73e9" SourceId="1" SourceUrl="net.tcp://localhost:8008/TeamBoardService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="5492deb8-ba2c-40f7-aec6-754638710499" SourceId="1" SourceUrl="net.tcp://localhost:8008/TeamBoardService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="b3060736-54df-4aae-ac5f-e6e5e1418f9e" SourceId="1" SourceUrl="net.tcp://localhost:8008/TeamBoardService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
